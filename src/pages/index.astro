@@ -1,0 +1,52 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { buttonVariants } from "@/components/ui/button";
+import {Input} from "@/components/ui/input";
+---
+
+<BaseLayout
+  title="Astro Shadcn UI Template"
+  description="This template helps you build apps with Astro, Tailwind CSS, and Shadcn UI."
+>
+  <section
+    class="container grid grid-cols-1 md:grid-cols-2 items-center gap-6 pt-6 pb-8 md:py-10"
+  >
+    <div>
+      <div class="flex max-w-[980px] flex-col items-start gap-2 mb-4">
+        <h1
+          class="text-8xl leading-tight font-extrabold tracking-tighter md:text-8xl"
+        >
+          The App For <span class="text-fuchsia-400"><br />Lash Techs</span>
+        </h1>
+        <p class="text-muted-foreground max-w-[700px] text-lg">
+          A booking system for lash techs with a game-changing mapping
+          designer. Join our email list for updates and an early bird discount!
+        </p>
+      </div>
+      <div>
+        <div class="flex gap-4 w-3/4">
+          <Input type="email" placeholder="youremail@example.com" client:load/>
+          <a
+            href="https://ui.shadcn.com"
+            target="_blank"
+            rel="noreferrer"
+            class={buttonVariants()}
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="border-1 shadow-2xl dark:shadow-fuchsia-700 dark:border-none skew-2 rounded-lg overflow-hidden">
+        <video id="vid" autoplay muted playsinline loop class="w-full">
+          <source src="video.mp4" type="video/mp4" />
+        </video>
+        <script>
+          document.getElementById("vid").play();
+        </script>
+      </div>
+    </section>
+  </section>
+</BaseLayout>

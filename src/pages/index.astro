@@ -1,7 +1,7 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { buttonVariants } from "@/components/ui/button";
-import {Input} from "@/components/ui/input";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 ---
 
 <BaseLayout
@@ -19,27 +19,27 @@ import {Input} from "@/components/ui/input";
           The App For <span class="text-fuchsia-400"><br />Lash Techs</span>
         </h1>
         <p class="text-muted-foreground max-w-[700px] text-lg">
-          A booking system for lash techs with a game-changing mapping
-          designer. Join our email list for updates and an early bird discount!
+          A booking system for lash techs with a game-changing mapping designer.
+          Join our email list for updates and an early bird discount!
         </p>
       </div>
       <div>
         <div class="flex gap-4 w-3/4">
-          <Input type="email" placeholder="youremail@example.com" client:load/>
-          <a
-            href="https://ui.shadcn.com"
-            target="_blank"
-            rel="noreferrer"
-            class={buttonVariants()}
+          <form name="contact" netlify>
+          <Input type="email" name="email" placeholder="youremail@example.com" client:load />
+          <Button
+          type="submit"
           >
             Learn More
-          </a>
+        </Button>
         </div>
       </div>
     </div>
 
     <section>
-      <div class="border-1 shadow-2xl dark:shadow-fuchsia-700 dark:border-none skew-2 rounded-lg overflow-hidden">
+      <div
+        class="border-1 shadow-2xl dark:shadow-fuchsia-700 dark:border-none skew-2 rounded-lg overflow-hidden"
+      >
         <video id="vid" autoplay muted playsinline loop class="w-full">
           <source src="video.mp4" type="video/mp4" />
         </video>

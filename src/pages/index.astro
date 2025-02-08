@@ -16,7 +16,9 @@ import { Input } from "@/components/ui/input";
         <h1
           class="text-8xl leading-tight font-extrabold tracking-tighter md:text-8xl"
         >
-          The App For <span class="text-fuchsia-400"><br class="sm:hidden"/>Lash Techs</span>
+          The App For <span class="text-fuchsia-400"
+            ><br class="sm:hidden" />Lash Techs</span
+          >
         </h1>
         <p class="text-muted-foreground max-w-[700px] text-lg">
           A booking system for lash techs with a game-changing mapping designer.
@@ -24,14 +26,14 @@ import { Input } from "@/components/ui/input";
         </p>
       </div>
       <div>
-        <form name="contact" class="flex gap-4 w-3/4" netlify>
+        <form name="contact" class="flex gap-4" netlify>
           <Input
             type="email"
             name="email"
             placeholder="youremail@example.com"
             client:load
           />
-          <Button type="submit"> Learn More </Button>
+          <Button type="submit">Submit</Button>
         </form>
       </div>
     </div>
@@ -50,14 +52,26 @@ import { Input } from "@/components/ui/input";
     </section>
   </section>
   <section
-    class="container grid grid-cols-1 md:grid-cols-[1fr_2fr] w-full items-center"
+    class="container grid grid-cols-1 md:grid-cols-[1fr_2fr] w-full items-center gap-20"
   >
     <img src="artboard.png" class="w-100" />
     <div>
-    <h1 class="text-4xl md:text-4xl font-bold">Free T-Shirt and Lash Shampoo</h1>
-    <p class="text-muted-foreground max-w-[700px] text-lg">
-      Enter your email in the form above to receive a free lashbook t-shirt and lash shampoo bundle!
-    </p>
+      <h1 class="text-4xl md:text-4xl font-bold">
+        Enter to Win LashBook Giveaway!
+      </h1>
+      <p class="text-muted-foreground max-w-[700px] text-lg mb-4">
+        Fill our our interest form to enter into a draw for a lashbook giveaway
+        bundle. Includes a 10% discount on the LashBook app at launch, a
+        t-shirt, lash shampoo and more!
+      </p>
+      <a
+        href="https://form.typeform.com/to/Az0ZbbYr"
+        target="_blank"
+        rel="noreferrer"
+        class={buttonVariants({ variant: "outline" })}
+      >
+        Enter Giveaway
+      </a>
     </div>
   </section>
 </BaseLayout>

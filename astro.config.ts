@@ -7,11 +7,11 @@ import netlify from "@astrojs/netlify";
 
 // https://astro.build/config
 export default defineConfig({
+site: 'https://my-site.com/', // this line is required
+
   integrations: [react()],
   vite: {
     plugins: [tailwindcss()],
   },
-  adapter: netlify({
-    edgeMiddleware: true
-}),
+  adapter: netlify(),
 });

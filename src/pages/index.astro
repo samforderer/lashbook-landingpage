@@ -24,19 +24,19 @@ import { Input } from "@/components/ui/input";
         </p>
       </div>
       <div>
-        <div class="flex gap-4 w-3/4">
-          <form name="contact" netlify>
-          <Input type="email" name="email" placeholder="youremail@example.com" client:load />
-          <Button
-          type="submit"
-          >
-            Learn More
-        </Button>
-        </div>
+        <form name="contact" class="flex gap-4 w-3/4" netlify>
+          <Input
+            type="email"
+            name="email"
+            placeholder="youremail@example.com"
+            client:load
+          />
+          <Button type="submit"> Learn More </Button>
+        </form>
       </div>
     </div>
 
-    <section>
+    <section class="mb-20">
       <div
         class="border-1 shadow-2xl dark:shadow-fuchsia-700 dark:border-none skew-2 rounded-lg overflow-hidden"
       >
@@ -48,5 +48,16 @@ import { Input } from "@/components/ui/input";
         </script>
       </div>
     </section>
+  </section>
+  <section
+    class="container grid grid-cols-1 md:grid-cols-[1fr_2fr] w-full items-center"
+  >
+    <img src="artboard.png" class="w-100" />
+    <div>
+    <h1 class="text-4xl md:text-4xl font-bold">Free T-Shirt and Lash Shampoo</h1>
+    <p class="text-muted-foreground max-w-[700px] text-lg">
+      Enter your email in the form above to receive a free lashbook t-shirt and lash shampoo bundle!
+    </p>
+    </div>
   </section>
 </BaseLayout>

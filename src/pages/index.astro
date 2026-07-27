@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "@/layouts/BaseLayout.astro";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 ---
 
@@ -26,15 +26,16 @@ import { Input } from "@/components/ui/input";
         </p>
       </div>
       <div>
-        <form name="contact" class="flex gap-4 mb-10" netlify>
-          <Input
-            type="email"
-            name="email"
-            placeholder="youremail@example.com"
-            client:load
-          />
-          <Button type="submit">Submit</Button>
-        </form>
+        <a
+          href="https://app.lashbook.ca"
+          class={buttonVariants({ size: "lg" }) +
+            " group bg-gradient-to-r from-fuchsia-500 to-fuchsia-700 text-white shadow-lg shadow-fuchsia-500/30 hover:shadow-xl hover:shadow-fuchsia-500/50 hover:scale-105 transition-all duration-200"}
+        >
+          Go to app
+          <span class="ml-2 transition-transform group-hover:translate-x-1"
+            >&rarr;</span
+          >
+        </a>
       </div>
     </div>
 
